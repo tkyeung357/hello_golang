@@ -15,7 +15,14 @@ func main() {
     //math
     fmt.Println("Random Number is:", rand.Intn(10))
     fmt.Println("5 + 10 =", add(5, 10))
-    fmt.Println("5.2 + 10 =", add2(5.2, 10))
+    fmt.Println("51 + 10 =", add2(51, 10))
+    
+    //multi results, tour 7
+    a, b := swap("hello", "world");
+    fmt.Println(a, b)
+    
+    //named return values
+    fmt.Println(split(17))
 }
     
 func add(x int, y int) int {
@@ -24,4 +31,15 @@ func add(x int, y int) int {
 
 func add2(x, y int) int {
     return x+y
+}
+
+func swap(x, y string) (string, string) {
+    return x, y
+}
+
+func split(sum int) (x, y int) {
+    
+    x = sum * 4 / 9
+    y = sum - x
+    return
 }
